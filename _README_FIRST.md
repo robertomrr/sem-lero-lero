@@ -116,11 +116,40 @@ Laravel Breeze é uma implementação mínima e simples de todos os recursos de 
 
 ## Criar CRUD para Usuarios utilizando recursos Livewire
 
-### Este comando cria um componente Livewire para o CRUD de usuário:
+### Este comando cria um componente Livewire para o CRUD de usuário
 
     > php artisan make:livewire UserCrud
 
-## Criando endereços
+### Inclua no arquivo (app/Livewire/UserCrud.php)
+
+    public function create()
+    public function store()
+    public function edit($id)
+    public function delete($id)
+
+    public function openModal()
+    public function closeModal()
+    
+    private function resetInputFields()
+
+### Crie a VIEW Livewire  (resources/views/livewire/user-crud.blade.php)
+
+    Utilize o arquivo (user-crud.blade.php) criado previamente 
+
+### Crie a VIEW para o Formulario de Criação/Edição dos registros.
+
+    Crie a view para o modal de criação e edição (resources/views/livewire/create.blade.php):
+
+### Crie a rota para o componente UserCrud
+
+    Adicione a rota para o componente Livewire em routes/web.php:
+
+        use App\Http\Livewire\UserCrud;
+
+        Route::get('users', UserCrud::class);
+
+
+## Criando endereços___________________________________________________________________
 
     > php artisan make:migration create_addresses_table --create=addresses
     > php artisan migrate
