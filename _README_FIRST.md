@@ -71,9 +71,8 @@ Laravel Breeze é uma implementação mínima e simples de todos os recursos de 
         > git add .
         > git commit -m "Configurar Idioma/Timezone" 
 
-### Apontar banco de dados no arquivo .env ( De laravel P/ db_03lw)
+### Apontar banco de dados no arquivo .env ( De laravel P/ db_sll)
 
-        .env
         DB_CONNECTION=mysql
         DB_HOST=127.0.0.1
         DB_PORT=3306
@@ -81,14 +80,16 @@ Laravel Breeze é uma implementação mínima e simples de todos os recursos de 
         DB_USERNAME=root
         DB_PASSWORD=
 
-### Criar tabelas padrão no banco de dados ( users, ...)
+#### Criar tabela padrão no banco de dados ( users)
 
         > php artisan migrate:fresh
 
-        Descomentar database\seeders\DatabaseSeeder.php
-             \App\Models\User::factory(10)->create();
+#### Descomentar database\seeders\DatabaseSeeder.php
 
-        Popular tabela users
+        \App\Models\User::factory(10)->create();
+
+#### Popular tabela users
+
         > php artisan db:seed
 
 ## Publicar GitHub
@@ -97,7 +98,7 @@ Laravel Breeze é uma implementação mínima e simples de todos os recursos de 
     > git branch -M main
     > git push -u origin main
 
-## Ativar Aplicação
+## Ativar Aplicação utilizando terminal CMD | Git Bash
 
     > CMD 
         > cd C:\laragon\www\sem-lero-lero
@@ -106,13 +107,17 @@ Laravel Breeze é uma implementação mínima e simples de todos os recursos de 
     > Browser
         > localhost:8000
 
-## Após clone
+## Após clone recompor aplicação com os arquivos ignorados
 
-    - **
     > composer update
     > npm install
     > copy .env.example .env
     > php artisan key:generate
+
+## Criar CRUD de Usuarios utilizando recursos Livewire
+
+### 
+    > php artisan make:livewire Users
 
 ## Criando endereços
 
