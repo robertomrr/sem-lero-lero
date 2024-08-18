@@ -124,6 +124,14 @@ Laravel Breeze é uma implementação mínima e simples de todos os recursos de 
 
 ### Inclua no arquivo (app/Livewire/UserCrud.php)
 
+#### Atributos
+
+    public $users, $name, $email, $user_id;
+    public $isModalOpen = 0;
+    public $ShowHideUser = true;
+
+#### Métodos
+
     public function create()
     public function store()
     public function edit($id)
@@ -131,7 +139,8 @@ Laravel Breeze é uma implementação mínima e simples de todos os recursos de 
 
     public function openModal()
     public function closeModal()
-    
+    public function ShowDashboard()
+
     private function resetInputFields()
 
 ### Crie a VIEW Livewire  (resources/views/livewire/user-crud.blade.php)

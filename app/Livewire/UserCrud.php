@@ -10,12 +10,19 @@ class UserCrud extends Component
 {
     public $users, $name, $email, $user_id;
     public $isModalOpen = 0;
+    public $ShowHideUser = true;
 
     public function render()
     {
-        $this->users = User::all();
-        //return view('livewire.user-crud')->layout('layouts.app'); // Especificando o layout
-        return view('livewire.user-crud');
+        if ($this->ShowHideUser){
+            
+            $this->users = User::all();
+            return view('livewire.user-crud')->layout('layouts.app'); // Especificando o layout
+     
+        } else{
+            return view('dashboard')->layout('layouts.app');
+            $this->ShowHideUser = true; 
+        }        
     }
     public function create()
     {
@@ -73,5 +80,10 @@ class UserCrud extends Component
     {
         User::find($id)->delete();
         session()->flash('message', 'User Deleted Successfully.');
-    }    
+    } 
+
+    public function ShowDashboard()
+    {
+        $this->ShowHideUser = false;
+    }
 }

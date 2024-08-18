@@ -1,14 +1,21 @@
 <div>
-    <div class="flex flex-col">
-        <div class="mb-4">
-            <button wire:click="create()" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Create User</button>
+    <div class="container mx-auto">
+
+        <div class="grid grid-cols-2">
+            <div class="mb-4">
+                <button wire:click="create()" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Create User</button>
+            </div>
+                        
+            <div class="mb-4">            
+                <button wire:click="ShowDashboard()" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Voltar</button>
+            </div>
         </div>
     
         @if($isModalOpen)
             @include('livewire.create')
         @endif
     
-        <table class="table-fixed w-full">
+        <table class="table-fixed w-full bg-white">
             <thead>
                 <tr class="bg-gray-100">
                     <th class="px-4 py-2">Name</th>
