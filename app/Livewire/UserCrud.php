@@ -52,11 +52,13 @@ class UserCrud extends Component
         $this->validate([
             'name' => 'required',
             'email' => 'required|email',
+            // 'password' => 'required',
         ]);
 
         User::updateOrCreate(['id' => $this->user_id], [
             'name' => $this->name,
             'email' => $this->email,
+            // 'password' => $this->password,
         ]);
 
         session()->flash('message',

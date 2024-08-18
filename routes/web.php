@@ -3,8 +3,10 @@
 use Illuminate\Support\Facades\Route;
 
 use App\Livewire\UserCrud;
+use App\Livewire\UserTable;
 
-Route::get('/users', UserCrud::class);
+Route::get('/UserCrud', UserCrud::class);
+Route::get('/UserTable', UserTable::class);
 
 Route::view('/', 'welcome');
 

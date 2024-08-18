@@ -116,21 +116,19 @@ Laravel Breeze é uma implementação mínima e simples de todos os recursos de 
     > copy .env.example .env
     > php artisan key:generate
 
-## Criar CRUD para Usuarios utilizando recursos Livewire
-
-    > php artisan make:livewire Users
+## Criar UserCrud para Usuarios utilizando recursos Livewire
 
     > php artisan make:livewire UserCrud
 
-### Inclua no arquivo (app/Livewire/UserCrud.php)
+### Incluir no arquivo (app/Livewire/UserCrud.php)
 
-#### Atributos
+    Atributos________________________________________
 
     public $users, $name, $email, $user_id;
     public $isModalOpen = 0;
     public $ShowHideUser = true;
 
-#### Métodos
+    Métodos_________________________________________
 
     public function create()
     public function store()
@@ -158,6 +156,17 @@ Laravel Breeze é uma implementação mínima e simples de todos os recursos de 
         use App\Http\Livewire\UserCrud;
 
         Route::get('users', UserCrud::class);
+
+## Criar UserTable para Usuarios utilizando recursos Livewire
+
+    > php artisan make:livewire UserTable
+
+### Incluir no arquivo (app/Livewire/UserTable.php)
+
+    Atributos________________________________________
+
+
+    Métodos_________________________________________
 
 ## Criando endereços___________________________________________________________________
 

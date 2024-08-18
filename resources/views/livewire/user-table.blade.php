@@ -3,7 +3,7 @@
 
         <div class="grid grid-cols-2">
             <div class="mb-4">
-                <button wire:click="create()" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Create User (CRUD)</button>
+                <button wire:click="create()" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Create User (Table)</button>
             </div>
                         
             <div class="mb-4">            
@@ -11,9 +11,9 @@
             </div>
         </div>
     
-        @if($isModalOpen)
-            @include('livewire.create')
-        @endif
+        {{-- if($isModalOpen)
+            include('livewire.create')
+        endif --}}
     
         <table class="table-fixed w-full bg-white">
             <thead>

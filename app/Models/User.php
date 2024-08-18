@@ -11,6 +11,11 @@ class User extends Authenticatable
 {
     use HasFactory, Notifiable;
 
+    protected $attributes = [
+        'password' => '0', // Valor padrão definido
+        'is_admin' => '0',
+    ];
+
     /**
      * The attributes that are mass assignable.
      *
@@ -20,6 +25,7 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'is_admin',
     ];
 
     /**
