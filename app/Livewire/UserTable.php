@@ -2,9 +2,13 @@
 
 namespace App\Livewire;
 
-use Livewire\Component;
-
 use App\Models\User;
+
+use Livewire\Component;
+use Livewire\WithPagination;
+
+
+
 
 class UserTable extends Component
 {
@@ -12,12 +16,16 @@ class UserTable extends Component
 
     public $ShowHideUser = true;
 
+    use WithPagination;
+    protected $paginationTheme = 'bootstrap'; // Define o tema de paginação, opcional
+    
     public function render()
     {
+        
         if ($this->ShowHideUser){
             
             $this->users = User::all();
-            return view('livewire.user-table')->layout('layouts.app'); // Especificando o layout
+            return view('livewire.user-table')->layout('layouts.app');
      
         } else{
             return view('dashboard')->layout('layouts.app');

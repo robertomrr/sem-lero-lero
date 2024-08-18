@@ -6,8 +6,10 @@ Criar um ambiente que mantenha informações sobre Ambiente Computacional, Agent
 
     https://www.youtube.com/watch?v=e83fM_0mGa8&t=133s
     https://livewire.laravel.com/docs/quickstart
-    https://livewire.laravel.com/docs/quickstart
     https://github.com/lucascudo/laravel-pt-BR-localization
+
+    https://www.youtube.com/@yelocode/featured
+    https://github.com/yelocode/livewire3-datatable/tree/main
 
 ## sem-lero-lero
 
