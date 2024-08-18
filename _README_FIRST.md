@@ -1,6 +1,6 @@
 # Objetivo desta aplicação
 
-Criar um ambiente que mantenha informações sobre Ambiente Computacional, Agentes, Ferramentas, Procedimentos... 
+Criar um ambiente que mantenha informações sobre Ambiente Computacional, Agentes, Ferramentas, Procedimentos...
 
 ## Links
 
@@ -53,7 +53,9 @@ Laravel Breeze é uma implementação mínima e simples de todos os recursos de 
     > git add .
     > git commit -m "Instalação Tailwind" 
 
-## > code .
+## > code
+
+    Ativar VSCode
 
 ### Configurar Idioma/Timezone
 
@@ -116,7 +118,7 @@ Laravel Breeze é uma implementação mínima e simples de todos os recursos de 
 
 ## Criar CRUD para Usuarios utilizando recursos Livewire
 
-### Este comando cria um componente Livewire para o CRUD de usuário
+    > php artisan make:livewire Users
 
     > php artisan make:livewire UserCrud
 
@@ -136,7 +138,7 @@ Laravel Breeze é uma implementação mínima e simples de todos os recursos de 
 
     Utilize o arquivo (user-crud.blade.php) criado previamente 
 
-### Crie a VIEW para o Formulario de Criação/Edição dos registros.
+### Crie a VIEW para o Formulario de Criação/Edição dos registros
 
     Crie a view para o modal de criação e edição (resources/views/livewire/create.blade.php):
 
@@ -147,7 +149,6 @@ Laravel Breeze é uma implementação mínima e simples de todos os recursos de 
         use App\Http\Livewire\UserCrud;
 
         Route::get('users', UserCrud::class);
-
 
 ## Criando endereços___________________________________________________________________
 
@@ -179,4 +180,4 @@ Acrescentar FirstName e lastName
 Configura um new resource
 > php artisan make:resource v1/UserResource
 > php artisan make:resource v1/InvoiceResource
-Continuação da configuração  --05 - Definir Relacionamentos dos Models
+>
